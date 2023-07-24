@@ -1,0 +1,35 @@
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    background-color: #292C3E;
+}
+
+header h1 {
+    width: 30%;
+    color: #FFFFFF;
+}
+
+.Menu{
+    display: flex;
+    gap: 10px; 
+    padding: 10px;
+    margin-right: 20px;
+}
+
+.Menu button {
+    border: none;
+    width: 80px;
+    height: 30px;
+    font-size: 20px;
+    color: #FFFFFF;
+    background-color: #292C3E; 
+    cursor: pointer;
+    /* 
+    */
+}
+
+.Menu button:hover  {
+    color: #E5F876;
+}
