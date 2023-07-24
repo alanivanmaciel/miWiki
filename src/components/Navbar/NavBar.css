@@ -1,35 +1,92 @@
-header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    text-align: center;
-    background-color: #292C3E;
+.NavBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  background-color: #292c3e;
 }
 
-header h1 {
-    width: 30%;
-    color: #FFFFFF;
+.Logo {
+  margin: 20px;
+  width: 20%;
+  color: #ffffff;
 }
 
-.Menu{
-    display: flex;
-    gap: 10px; 
-    padding: 10px;
-    margin-right: 20px;
+.Logo:hover {
+  color: #e5f876;
+}
+
+.Menu {
+  display: flex;
+  gap: 10px;
+  padding-bottom: 5px;
 }
 
 .Menu button {
-    border: none;
-    width: 80px;
-    height: 30px;
-    font-size: 20px;
-    color: #FFFFFF;
-    background-color: #292C3E; 
-    cursor: pointer;
-    /* 
-    */
+  border: none;
+  width: 80px;
+  height: 30px;
+  font-size: 20px;
+  color: #ffffff;
+  background-color: #292c3e;
+  cursor: pointer;
 }
 
-.Menu button:hover  {
-    color: #E5F876;
+.Menu button:hover {
+  color: #e5f876;
+}
+
+.Toggle {
+    display: none;
+}
+
+/*Menu Hamburguesa*/
+@media (max-width: 768px) {
+    .Menu {
+        position: absolute;
+        top: 73px;
+        display: flex;
+        flex-direction: column;
+        background-color: #292c3e;
+        width: 100%;
+        height: auto;
+        transform: translateX(-100%);
+        align-items: center;
+        transition: all 0.3s;
+    }
+
+    .Toggle{
+        display: flex !important;
+        flex-direction: column;
+        margin-right: 15px;
+        background: transparent;
+        border: 0;
+    }
+
+    .Toggle div{
+        width: 30px;
+        height: 2px;
+        background-color: #ffffff;
+        margin-bottom: 5px;
+        border-radius: 3px;
+        transition: all .5s;
+        transform-origin: left;
+    }
+
+    .Menu button {
+        width: 100%;
+    }
+
+    .Toggle:hover div:first-child {
+        transform: rotate(45deg);
+    }
+    .Toggle:hover div:nth-child(2){
+        opacity: 0;
+    }
+    .Toggle:hover div:last-child{
+        transform: rotate(-45deg);
+    }
+    .open {
+        transform: translateX(0) !important;
+    }
 }
